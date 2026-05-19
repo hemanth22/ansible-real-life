@@ -33,5 +33,6 @@ site:
   title: "Ansible Dashboard Gallery"
   subtitle: "Production-ready dashboard examples for Ansible Automation Platform"
   author: "Gineesh Madapparambath"
-  github_repo: "https://github.com/YOUR_USERNAME/ansible-dashboard-reporting"
+  author_url: "https://gineesh.com"
+  github_repo: "https://github.com/iamgini/ansible-real-life/tree/main/ansible-dashboard-reporting"
   year: 2024
