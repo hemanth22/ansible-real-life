@@ -15,6 +15,7 @@ ansible-dashboard-reporting/
 └── DASHBOARD-HOSTING.md        # This file
 ```
 
+
 ---
 
 ## 🚀 Quick Start
@@ -84,7 +85,7 @@ ansible-dashboard-reporting/
    Build output dir:  /
    Root directory:    /
    ```
-   
+
    Or if using bash:
    ```
    Build command:     ./generate-index.sh
@@ -235,6 +236,6 @@ All dashboards are production-ready and can be used as templates!
 
 ## 📝 License & Credits
 
-Created by Gineesh Madapparambath  
-Powered by Red Hat Ansible Automation Platform  
+Created by Gineesh Madapparambath
+Powered by Red Hat Ansible Automation Platform
 © 2024
