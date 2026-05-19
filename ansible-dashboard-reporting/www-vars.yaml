@@ -1,0 +1,37 @@
+---
+# Dashboard metadata for index.html generation
+# Format: filename: description
+
+dashboards:
+  demo-dashboard.html:
+    title: "OS Patching Workflow Dashboard"
+    description: "Real-time patching workflow with task status, progress tracking, and error handling for APP-DB-MQ cluster"
+    category: "Operations"
+
+  compliance-main-dashboard.html:
+    title: "Security Compliance Overview"
+    description: "OpenSCAP compliance dashboard showing overall security posture across infrastructure"
+    category: "Security & Compliance"
+
+  compliance-server-details.html:
+    title: "Server Compliance Details"
+    description: "Detailed compliance status per server with rule-level breakdown and remediation links"
+    category: "Security & Compliance"
+
+  compliance-remediation-tracker.html:
+    title: "Compliance Remediation Tracker"
+    description: "Track remediation progress, priorities, and responsible teams for compliance violations"
+    category: "Security & Compliance"
+
+  compliance-exceptions.html:
+    title: "Compliance Exceptions Management"
+    description: "Manage approved compliance exceptions, risk assessments, and expiration tracking"
+    category: "Security & Compliance"
+
+# Site metadata
+site:
+  title: "Ansible Dashboard Gallery"
+  subtitle: "Production-ready dashboard examples for Ansible Automation Platform"
+  author: "Gineesh Madapparambath"
+  github_repo: "https://github.com/YOUR_USERNAME/ansible-dashboard-reporting"
+  year: 2024
