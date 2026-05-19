@@ -15,7 +15,6 @@ ansible-dashboard-reporting/
 └── DASHBOARD-HOSTING.md        # This file
 ```
 
-
 ---
 
 ## 🚀 Quick Start
