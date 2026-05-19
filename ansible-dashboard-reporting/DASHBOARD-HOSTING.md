@@ -79,17 +79,19 @@ ansible-dashboard-reporting/
    - Choose this repository
 
 3. **Configure Build Settings**
+   
+   **For Python (Recommended - Rich features):**
    ```
-   Build command:     python3 generate-index.py
+   Root directory:    ansible-dashboard-reporting
+   Build command:     pip install -r requirements.txt && python3 generate-index.py
    Build output dir:  /
-   Root directory:    /
    ```
-
-   Or if using bash:
+   
+   **For Bash (Simple - No dependencies):**
    ```
+   Root directory:    ansible-dashboard-reporting
    Build command:     ./generate-index.sh
    Build output dir:  /
-   Root directory:    /
    ```
 
 4. **Deploy**
