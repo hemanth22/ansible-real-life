@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find *)",
+      "Bash(cp -r /home/gmadappa/ansible-bau/ansible-dashboard-reporting/templates/email /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/)",
+      "Bash(cp -r /home/gmadappa/ansible-bau/ansible-dashboard-reporting/templates/health-check /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/)",
+      "Bash(cp -r /home/gmadappa/ansible-bau/ansible-dashboard-reporting/templates/notifications /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/)",
+      "Bash(cp -r /home/gmadappa/ansible-bau/ansible-dashboard-reporting/templates/project-onboarding /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/)",
+      "Bash(cp -r /home/gmadappa/ansible-bau/ansible-dashboard-reporting/templates/rbac-check /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/)",
+      "Bash(mv /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/email/email-dns-report.html.j2 /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/email_dns_report.html.j2)",
+      "Bash(mv /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/email/email-health-check-report.html.j2 /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/email_health_check_report.html.j2)",
+      "Bash(mv /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/email/email-project-check.html.j2 /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/email_project_check.html.j2)",
+      "Bash(mv /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/email/email-project-validation-failed.html.j2 /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/email_project_validation_failed.html.j2)",
+      "Bash(mv /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/notifications/health-check-failed.html /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/notify_health_check_failed.html)",
+      "Bash(python3 generate-index.py)"
+    ]
+  }
+}
