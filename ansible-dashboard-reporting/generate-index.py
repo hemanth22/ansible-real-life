@@ -350,8 +350,9 @@ def generate_html(metadata, grouped_dashboards):
             view_label = "View Report" if dashboard.get("type") == "report" else "View Dashboard"
             template_link = ""
             if dashboard.get("template"):
+                template_github_url = f'https://github.com/iamgini/ansible-real-life/blob/main/ansible-dashboard-reporting/templates/{dashboard["template"]}'
                 template_link = f'''
-                    <a href="templates/{dashboard["template"]}" class="template-link" onclick="event.stopPropagation();">See Jinja2 Template</a>'''
+                    <a href="{template_github_url}" class="template-link" target="_blank" onclick="event.stopPropagation();">See Jinja2 Template</a>'''
             html += f'''
                 <div class="dashboard-card" onclick="window.location.href='{EXAMPLES_DIR}/{dashboard["filename"]}'">
                     <h3 class="dashboard-title">{dashboard["title"]}</h3>

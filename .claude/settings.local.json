@@ -12,7 +12,8 @@
       "Bash(mv /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/email/email-project-check.html.j2 /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/email_project_check.html.j2)",
       "Bash(mv /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/email/email-project-validation-failed.html.j2 /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/email_project_validation_failed.html.j2)",
       "Bash(mv /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/notifications/health-check-failed.html /home/gmadappa/ansible/ansible-real-life/ansible-dashboard-reporting/templates/notify_health_check_failed.html)",
-      "Bash(python3 generate-index.py)"
+      "Bash(python3 generate-index.py)",
+      "Bash(grep -v '.j2$')"
     ]
   }
 }
