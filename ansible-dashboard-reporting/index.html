@@ -171,6 +171,32 @@
             transform: translateX(5px);
         }
 
+        .card-links {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .template-link {
+            display: inline-block;
+            color: #9333ea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }
+
+        .template-link:hover {
+            color: #6b21a8;
+            text-decoration: underline;
+        }
+
+        .template-link::before {
+            content: '{ } ';
+            font-family: monospace;
+            font-size: 1.1em;
+        }
+
         footer {
             background: rgba(0, 0, 0, 0.8);
             color: white;
@@ -246,37 +272,55 @@
                 <div class="dashboard-card" onclick="window.location.href='examples/ocp-health-check-extended-report.html'">
                     <h3 class="dashboard-title">OCP Extended Health Check Report</h3>
                     <p class="dashboard-description">Extended health check with persistent volumes, storage usage, SSL certificates, API encryption, and self-provisioning status</p>
-                    <a href="examples/ocp-health-check-extended-report.html" class="dashboard-link">View Report</a>
+                    <div class="card-links">
+                        <a href="examples/ocp-health-check-extended-report.html" class="dashboard-link">View Report</a>
+                    <a href="templates/ocp_health_check_ext_report.html" class="template-link" onclick="event.stopPropagation();">See Jinja2 Template</a>
+                    </div>
                 </div>
 
                 <div class="dashboard-card" onclick="window.location.href='examples/ocp-health-check-report.html'">
                     <h3 class="dashboard-title">OCP Health Check Report</h3>
                     <p class="dashboard-description">Cluster health check showing nodes, API/DNS/ingress/registry/logging/auth/monitoring pods, and cluster configurations</p>
-                    <a href="examples/ocp-health-check-report.html" class="dashboard-link">View Report</a>
+                    <div class="card-links">
+                        <a href="examples/ocp-health-check-report.html" class="dashboard-link">View Report</a>
+                    <a href="templates/ocp_health_check_report.html" class="template-link" onclick="event.stopPropagation();">See Jinja2 Template</a>
+                    </div>
                 </div>
 
                 <div class="dashboard-card" onclick="window.location.href='examples/ocp-operation-report.html'">
                     <h3 class="dashboard-title">OCP Resource Operation Report</h3>
                     <p class="dashboard-description">Email-style notification for RBAC/Quota/NetworkPolicy create and update operations with request details</p>
-                    <a href="examples/ocp-operation-report.html" class="dashboard-link">View Report</a>
+                    <div class="card-links">
+                        <a href="examples/ocp-operation-report.html" class="dashboard-link">View Report</a>
+                    <a href="templates/ocp_operation_report.html" class="template-link" onclick="event.stopPropagation();">See Jinja2 Template</a>
+                    </div>
                 </div>
 
                 <div class="dashboard-card" onclick="window.location.href='examples/ocp-project-onboarding-report.html'">
                     <h3 class="dashboard-title">OCP Project Onboarding Report</h3>
                     <p class="dashboard-description">Project onboarding status report with full resource details - CPU, memory, storage, egress, RBAC, and contacts</p>
-                    <a href="examples/ocp-project-onboarding-report.html" class="dashboard-link">View Report</a>
+                    <div class="card-links">
+                        <a href="examples/ocp-project-onboarding-report.html" class="dashboard-link">View Report</a>
+                    <a href="templates/ocp_onboarding_report.html" class="template-link" onclick="event.stopPropagation();">See Jinja2 Template</a>
+                    </div>
                 </div>
 
                 <div class="dashboard-card" onclick="window.location.href='examples/ocp-rbac-audit-report.html'">
                     <h3 class="dashboard-title">OCP RBAC Audit Report</h3>
                     <p class="dashboard-description">ClusterRoleBinding audit showing users, groups, and service accounts across all RBAC bindings</p>
-                    <a href="examples/ocp-rbac-audit-report.html" class="dashboard-link">View Report</a>
+                    <div class="card-links">
+                        <a href="examples/ocp-rbac-audit-report.html" class="dashboard-link">View Report</a>
+                    <a href="templates/ocp_rbac_check_report.html" class="template-link" onclick="event.stopPropagation();">See Jinja2 Template</a>
+                    </div>
                 </div>
 
                 <div class="dashboard-card" onclick="window.location.href='examples/ocp-ssl-certificate-report.html'">
                     <h3 class="dashboard-title">OCP SSL Certificate Report</h3>
                     <p class="dashboard-description">SSL certificate expiry tracking with validity checks at 30-day and 12-week thresholds</p>
-                    <a href="examples/ocp-ssl-certificate-report.html" class="dashboard-link">View Report</a>
+                    <div class="card-links">
+                        <a href="examples/ocp-ssl-certificate-report.html" class="dashboard-link">View Report</a>
+                    <a href="templates/ocp_ssl_check_report.html" class="template-link" onclick="event.stopPropagation();">See Jinja2 Template</a>
+                    </div>
                 </div>
 
             </div>
@@ -289,7 +333,10 @@
                 <div class="dashboard-card" onclick="window.location.href='examples/demo-dashboard.html'">
                     <h3 class="dashboard-title">OS Patching Workflow Dashboard</h3>
                     <p class="dashboard-description">Real-time patching workflow with task status, progress tracking, and error handling for APP-DB-MQ cluster</p>
-                    <a href="examples/demo-dashboard.html" class="dashboard-link">View Dashboard</a>
+                    <div class="card-links">
+                        <a href="examples/demo-dashboard.html" class="dashboard-link">View Dashboard</a>
+                    <a href="templates/patching_workflow_dashboard.html" class="template-link" onclick="event.stopPropagation();">See Jinja2 Template</a>
+                    </div>
                 </div>
 
             </div>
@@ -302,25 +349,37 @@
                 <div class="dashboard-card" onclick="window.location.href='examples/compliance-exceptions.html'">
                     <h3 class="dashboard-title">Compliance Exceptions Management</h3>
                     <p class="dashboard-description">Manage approved compliance exceptions, risk assessments, and expiration tracking</p>
-                    <a href="examples/compliance-exceptions.html" class="dashboard-link">View Dashboard</a>
+                    <div class="card-links">
+                        <a href="examples/compliance-exceptions.html" class="dashboard-link">View Dashboard</a>
+                    <a href="templates/compliance_exceptions.html" class="template-link" onclick="event.stopPropagation();">See Jinja2 Template</a>
+                    </div>
                 </div>
 
                 <div class="dashboard-card" onclick="window.location.href='examples/compliance-main-dashboard.html'">
                     <h3 class="dashboard-title">Security Compliance Overview</h3>
                     <p class="dashboard-description">OpenSCAP compliance dashboard showing overall security posture across infrastructure</p>
-                    <a href="examples/compliance-main-dashboard.html" class="dashboard-link">View Dashboard</a>
+                    <div class="card-links">
+                        <a href="examples/compliance-main-dashboard.html" class="dashboard-link">View Dashboard</a>
+                    <a href="templates/compliance_main_dashboard.html" class="template-link" onclick="event.stopPropagation();">See Jinja2 Template</a>
+                    </div>
                 </div>
 
                 <div class="dashboard-card" onclick="window.location.href='examples/compliance-remediation-tracker.html'">
                     <h3 class="dashboard-title">Compliance Remediation Tracker</h3>
                     <p class="dashboard-description">Track remediation progress, priorities, and responsible teams for compliance violations</p>
-                    <a href="examples/compliance-remediation-tracker.html" class="dashboard-link">View Dashboard</a>
+                    <div class="card-links">
+                        <a href="examples/compliance-remediation-tracker.html" class="dashboard-link">View Dashboard</a>
+                    <a href="templates/compliance_remediation_tracker.html" class="template-link" onclick="event.stopPropagation();">See Jinja2 Template</a>
+                    </div>
                 </div>
 
                 <div class="dashboard-card" onclick="window.location.href='examples/compliance-server-details.html'">
                     <h3 class="dashboard-title">Server Compliance Details</h3>
                     <p class="dashboard-description">Detailed compliance status per server with rule-level breakdown and remediation links</p>
-                    <a href="examples/compliance-server-details.html" class="dashboard-link">View Dashboard</a>
+                    <div class="card-links">
+                        <a href="examples/compliance-server-details.html" class="dashboard-link">View Dashboard</a>
+                    <a href="templates/compliance_server_details.html" class="template-link" onclick="event.stopPropagation();">See Jinja2 Template</a>
+                    </div>
                 </div>
 
             </div>
@@ -334,7 +393,7 @@
         <p>Powered by Red Hat Ansible Automation Platform</p>
         <a href="https://github.com/iamgini/ansible-real-life/tree/main/ansible-dashboard-reporting" class="github-link" target="_blank">View on GitHub</a>
         <p style="margin-top: 20px; font-size: 0.85em; opacity: 0.7;">
-            © 2024 | Last generated: 2026-07-15 15:10:12 UTC
+            © 2024 | Last generated: 2026-07-15 15:29:38 UTC
         </p>
     </footer>
 </body>

@@ -47,7 +47,8 @@ def group_dashboards_by_category(metadata, files):
                 'filename': filename,
                 'title': info.get('title', filename),
                 'description': info.get('description', 'No description available'),
-                'type': info.get('type', 'dashboard')
+                'type': info.get('type', 'dashboard'),
+                'template': info.get('template', '')
             })
         else:
             # File exists but not in metadata
@@ -243,6 +244,32 @@ def generate_html(metadata, grouped_dashboards):
             transform: translateX(5px);
         }}
 
+        .card-links {{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }}
+
+        .template-link {{
+            display: inline-block;
+            color: #9333ea;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85em;
+            transition: all 0.2s;
+        }}
+
+        .template-link:hover {{
+            color: #6b21a8;
+            text-decoration: underline;
+        }}
+
+        .template-link::before {{
+            content: '{{ }} ';
+            font-family: monospace;
+            font-size: 1.1em;
+        }}
+
         footer {{
             background: rgba(0, 0, 0, 0.8);
             color: white;
@@ -320,11 +347,18 @@ def generate_html(metadata, grouped_dashboards):
             <div class="dashboard-grid">
 '''
         for dashboard in dashboards:
+            view_label = "View Report" if dashboard.get("type") == "report" else "View Dashboard"
+            template_link = ""
+            if dashboard.get("template"):
+                template_link = f'''
+                    <a href="templates/{dashboard["template"]}" class="template-link" onclick="event.stopPropagation();">See Jinja2 Template</a>'''
             html += f'''
                 <div class="dashboard-card" onclick="window.location.href='{EXAMPLES_DIR}/{dashboard["filename"]}'">
                     <h3 class="dashboard-title">{dashboard["title"]}</h3>
                     <p class="dashboard-description">{dashboard["description"]}</p>
-                    <a href="{EXAMPLES_DIR}/{dashboard["filename"]}" class="dashboard-link">{"View Report" if dashboard.get("type") == "report" else "View Dashboard"}</a>
+                    <div class="card-links">
+                        <a href="{EXAMPLES_DIR}/{dashboard["filename"]}" class="dashboard-link">{view_label}</a>{template_link}
+                    </div>
                 </div>
 '''
         html += '''
